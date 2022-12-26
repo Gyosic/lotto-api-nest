@@ -35,3 +35,7 @@ export type UpdateNumParams = {
 
   bnusNo: number;
 };
+export type CreateMyNumParams = {
+  createdAt: string;
+  nums: number[];
+};

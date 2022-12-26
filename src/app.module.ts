@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Num } from './typeorm/entities/Num';
 import { NumsModule } from './nums/nums.module';
-import { ConfigModule } from '@nestjs/config';
+import { MyNum } from './typeorm/entities/myNum';
+import { MyNumsModule } from './my-nums/my-nums.module';
 
 @Module({
   imports: [
@@ -16,10 +18,11 @@ import { ConfigModule } from '@nestjs/config';
       username: process.env.DATABASE_USERNAME || 'root',
       password: process.env.DATABASE_PASSWORD || '#gyosic1234',
       database: process.env.DATABASE_NAME || 'lotto',
-      entities: [Num],
+      entities: [Num, MyNum],
       synchronize: true,
     }),
     NumsModule,
+    MyNumsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
