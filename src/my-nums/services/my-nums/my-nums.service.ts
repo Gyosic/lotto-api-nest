@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { MyNum } from 'src/typeorm/entities/myNum';
+import { MyNum } from 'src/typeorm/entities/MyNum';
 import { CreateMyNumParams } from 'src/utils/types';
 
 @Injectable()

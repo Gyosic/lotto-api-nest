@@ -5,7 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Num } from './typeorm/entities/Num';
 import { NumsModule } from './nums/nums.module';
-import { MyNum } from './typeorm/entities/myNum';
+import { MyNum } from './typeorm/entities/MyNum';
 import { MyNumsModule } from './my-nums/my-nums.module';
 
 @Module({
