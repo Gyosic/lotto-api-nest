@@ -14,7 +14,6 @@ import { MyNumsModule } from './my-nums/my-nums.module';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: process.env.DATABASE_HOST || 'localhost',
-      port: 3306,
       username: process.env.DATABASE_USERNAME || 'root',
       password: process.env.DATABASE_PASSWORD || '#gyosic1234',
       database: process.env.DATABASE_NAME || 'lotto',
