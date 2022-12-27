@@ -39,3 +39,7 @@ export type CreateMyNumParams = {
   createdAt: string;
   nums: number[];
 };
+export type FindPickedNumsParams = {
+  sdate: string;
+  edate: string;
+};
