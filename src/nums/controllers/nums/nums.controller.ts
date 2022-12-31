@@ -31,6 +31,14 @@ export class NumsController {
         this.numService.regNum({ returnValue, ..._data });
         return [{ returnValue, ..._data }];
       }
+    } else {
+      const [dbData] = data;
+      const { returnValue, ...reqData } = await this.numService.requestDrwNo(
+        drwNo,
+      );
+      if (dbData.firstWinamnt !== reqData.firstWinamnt) {
+        await this.numService.updateNum(dbData.id, { returnValue, ...reqData });
+      }
     }
     return this.numService.findNumByDrwNo(drwNo);
   }
